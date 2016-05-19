@@ -1,0 +1,18 @@
+/*
+*   Autor       : Cengiz AKCAN
+*   Mail        : cengiz@polotasarim.com
+*   Time        : 2016-19-5 22:20:00
+*   Project     : Fix Basic Notification
+*   Version     : 1.0.0 Beta
+*   Github      : cengizakcan1996
+*   Facebook    : cengizakcan1996
+*   Twitter     : cengiz_akcan
+*
+* */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100,900&subset=latin,greek,latin-ext);
+
+.fix-one        { display: none; font-family: 'Roboto', sans-serif; width: 100%; height: auto; position: absolute; z-index: 99999999999999; margin: 0px; padding: 0px; border: 0px;  }
+.fix-content    { width: 1000px; height: auto; margin-left: auto; margin-right: auto; }
+.fix-title      { float: left;  font-weight: bolder; color: white; font-size: 20px; letter-spacing: 1.5px;padding: 15px 0px 15px 0px; }
+.fix-message    {float: left;margin-left: 8px;font-weight: lighter;color: white;font-size: 14px;letter-spacing: 1.5px;padding: 19px 0px 15px 0px;}
+.fix-exit       { float: right; font-weight: bold; color: white; font-size: 19px; padding: 15px 0px 15px 0px; cursor: pointer; }

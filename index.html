@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+   /*
+    *   Autor       : Cengiz AKCAN
+    *   Mail        : cengiz@polotasarim.com
+    *   Time        : 2016-19-5 22:20:00
+    *   Project     : Fix Basic Notification
+    *   Version     : 1.0.0 Beta
+    *   Github      : cengizakcan1996
+    *   Facebook    : cengizakcan1996
+    *   Twitter     : cengiz_akcan
+    *
+    * */
+    -->
+
+    <meta charset="UTF-8">
+    <title> Fix Notification Version 1.1</title>
+
+    <!-- Jquery Files Request -->
+    <script src="demo/jquery-1.11.3.js"></script>
+
+    <!-- Clear Css -->
+    <link href="demo/clear.css" rel="stylesheet" >
+
+
+    <!-- Css and Javascript Files Request -->
+    <link href="fix-notification/fix-notification.css" rel="stylesheet" >
+    <script src="fix-notification/fix-notification.js"  ></script>
+
+    <script>
+        $(function () {
+
+        $("button").click(function () {
+
+            $(document).fix({
+                title:          "TITLE",    // Notification title
+                message:        "This is a testing message",  // Notification message detalis
+                type:           "top",   // Notification type bottom or top
+                color:          "#6a1b9a",  // Notification background color
+                class:          "test",     // Notification add class
+                timer:          "5000"          // Notification show and hide time secont Examples 5 second ( 5000 = 5 )
+            });
+
+
+        });
+
+
+
+        });
+    </script>
+
+</head>
+    <body>
+
+ <button>Press this button</button>
+
+    </body>
+</html>
