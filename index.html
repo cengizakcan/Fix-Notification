@@ -33,21 +33,26 @@
     <script>
         $(function () {
 
-        $("button").click(function () {
+            $("button").click(function () {
 
-            $(document).fix({
-                title:          "TITLE",    // Notification title
-                message:        "This is a testing message",  // Notification message detalis
-                type:           "top",   // Notification type bottom or top
-                color:          "#6a1b9a",  // Notification background color
-                class:          "test",     // Notification add class
-                timer:          "5000"          // Notification show and hide time secont Examples 5 second ( 5000 = 5 )
+                var status = $(this).data("types");
+
+                $(document).fix({
+                    title:          "TITLE",                        // Notification title
+                    message:        "This is a testing message",    // Notification message detalis
+                    type:           status,                              // Notification type success - danger - warning - info
+                    status:         "success",                         // Notification background color
+                    class:          "test",                         // Notification add class
+                    timer:          "",                          // Notification show and hide time secont Examples 5 second ( 5000 = 5 )
+                    show:           250,
+                    end:            function(){
+
+                        $(".return").html("finis");
+
+                    }
+                });
+
             });
-
-
-        });
-
-
 
         });
     </script>
@@ -55,7 +60,10 @@
 </head>
     <body>
 
- <button>Press this button</button>
+         <button data-types="bottom">BOTTOM</button>
+         <button data-types="top">TOP</button>
+         <button data-types="box-right-bottom">BOX RIGHT BOTTOM</button>
+         <button data-types="box-right-top">BOX RIGHT TOP</button>
 
     </body>
 </html>

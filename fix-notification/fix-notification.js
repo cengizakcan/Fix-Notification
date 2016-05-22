@@ -20,12 +20,12 @@
         var x = $.extend({
 
             type:       "bottom",
-            title:      "TİTLE",
+            title:      "TITLE",
             message:    "MESSAGE",
-            class:      "",
-            color:      "#5e35b1",
+            status:     "danger",
             timer:      "5000",
-            show:       250
+            show:       250,
+            end:        function(data){}
 
 
         }, param);
@@ -36,36 +36,40 @@
               * @ Param
               * @ Mix Alert
               * */
-             $("body").append('<div class="fix-one" ><div class="fix-content"><div class="fix-title">'+ x.title+'</div><div class="fix-message">'+ x.message+'</div><div class="fix-exit">X</div></div></div>');
-
+             $("body").append('<div class="fixall fixexit" ><div class="fix-content"><div class="fix-title">'+ x.title+'</div><div class="fix-message">'+ x.message+'</div></div></div>');
 
 			 
              /*
               * @ Param Selector
               * @ Mix Selector
               * */
-             var    one     =   $(".fix-one");
-             var    exit    =   $(".fix-exit");
-
-             /*
-              * @ Param
-              * @ Mix All Notification Remove
-              * */
-            //one.remove();
+             var    fixall     =   $(".fixall");
+             var    fixexit    =   $(".fixexit");
 
          
              /*
               * @ Param
               * @ Mix Timer
               * */
-              if(x.timer !== "" && $.isNumeric(x.timer)){ setTimeout(function(){ one.fadeOut(x.show); }, x.timer ); }
+              if(x.timer !== "" && $.isNumeric(x.timer)){ setTimeout(function(){ fixall.fadeOut(x.show).remove();    x.end("finis"); }, x.timer ); }
 
 
              /*
               * @ Param
-              * @ Mix Exit
+              * @ Mix Status
               * */
-             exit.click(function(){  one.fadeOut(x.show); });
+              if((x.status !== "") && (x.status !== "danger") && (x.status !== "success") && (x.status !== "warning") && (x.status !== "warning") && (x.status !== "info") ){ x.status = "success"; }
+              if(x.status == "success") {}
+              if(x.status == "danger")  {}
+              if(x.status == "warning") {}
+              if(x.status == "info")    {}
+
+
+             /*
+              * @ Param
+              * @ Mix Exit and remove
+              * */
+             fixexit.click(function(){  $(this).fadeOut(x.show); $(this).remove(); x.end("remove"); });
 
 
 
@@ -73,28 +77,20 @@
               * @ Param x.color
               * @ Mix Animated
               * */
-             if(x.class !== "")         { one.addClass(x.class); }
-             if(x.type == "bottom")     { one.css({ bottom:"0px" }); }
-             if(x.type == "top")        { one.css({ top:"0px" }); }
-
-
-             /*
-              * @ Param
-              * @ Mix Alert
-              * */
-             one.css(
-                 {
-                     background:    x.color,
-                     color:         "white"
-                 }
-             );
+             if((x.type !== "bottom") && (x.type !== "top") && (x.type !== "box-right-bottom") && (x.type !== "box-right-top") ){ x.type = "top"; }
+             if(x.class == "")                          { fixall.removeClass("fix-four fix-two fix-three"); fixall.addClass("fix-one " + x.status); }
+             if(x.type == "bottom")                     { fixall.removeClass("fix-one fix-one fix-two fix-three"); fixall.addClass("fix-four " + x.status); }
+             if(x.type == "top")                        { fixall.removeClass("fix-four fix-two fix-three"); fixall.addClass("fix-one " + x.status); }
+             if(x.type == "box-right-bottom")           { fixall.removeClass("fix-four fix-one fix-three"); fixall.addClass("fix-two " + x.status); }
+             if(x.type == "box-right-top")              { fixall.removeClass("fix-four fix-one fix-two"); fixall.addClass("fix-three " + x.status); }
 
 
              /*
               * @ Param
               * @ Mix Show Notification
               * */
-            one.fadeIn(x.show);
+             fixall.fadeIn(x.show);
+
 
         }
 
