@@ -14,7 +14,7 @@ Basic Use
                     show:           250,
                     end:            function(){
 
-                        $(".return").html("finis");
+                       alert("Finis");
 
                     }
 
