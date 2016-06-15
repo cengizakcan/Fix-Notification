@@ -31,6 +31,7 @@
     <script src="fix-notification/fix-notification.js"  ></script>
 
     <script>
+	
         $(function () {
 
             $("button").click(function () {
@@ -38,23 +39,19 @@
                 var status = $(this).data("types");
 
                 $(document).fix({
-                    title:          "TITLE",                        // Notification title
-                    message:        "This is a testing message",    // Notification message detalis
-                    type:           status,                              // Notification type success - danger - warning - info
-                    status:         "success",                         // Notification background color
+                    title:          "KAYIT",                        // Notification title
+                    message:        "Tebrikler kullanıcı kaydınız başarılı bir şekilde oluşturulmuştur.",    // Notification message detalis
+                    type:           status,             			// Notification type success - danger - warning - info
+                    status:         "info",                      // Notification background color
                     class:          "test",                         // Notification add class
-                    timer:          "",                          // Notification show and hide time secont Examples 5 second ( 5000 = 5 )
-                    show:           250,
-                    end:            function(){
-
-                        $(".return").html("finis");
-
-                    }
+                    timer:          "",                           	// Notification show and hide time secont Examples 5 second ( 5000 = 5 )
+                    show:           500
                 });
 
             });
 
         });
+		
     </script>
 
 </head>

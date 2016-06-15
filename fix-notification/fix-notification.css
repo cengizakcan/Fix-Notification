@@ -13,29 +13,37 @@
 
 
 /* Master Css */
-.fixall        								    { display: none; font-family: 'Roboto', sans-serif; width: 100%; height: auto; position: absolute; z-index: 99999999999999; margin: 0px; padding: 0px; border: 0px;  }
-.success                                        { background-color: #4caf50; }
-.danger                                         { background-color: #c62828; }
-.warning                                        { background-color: #c0ca33; }
-.info                                           { background-color: #1e88e5; }
+.fixall        								    	{ display: none; font-family: 'Roboto', sans-serif; width: 100%; height: auto; position: absolute; z-index: 99999999999999; margin: 0px; padding: 0px; border: 0px;  }
+.success                                        				{ background-color: #4caf50; }
+.danger                                         				{ background-color: #c62828; }
+.warning                                        				{ background-color: #c0ca33; }
+.info                                           				{ background-color: #1e88e5; }
 
-.fix-one    					                { width: 100%; top: 0px; }
-.fix-one > .fix-content   					    { width: 1000px; height: auto; margin-left: auto; margin-right: auto; }
+.fix-one    					                		{ width: 100%; top: 0px; }
+.fix-one > .fix-content   					{     height: auto;margin-left: auto;margin-right: auto;max-width: calc(100% - 30px);padding-left: 15px;padding-right: 15px;width: 1000px;}
 .fix-one > .fix-content  > .fix-title      	 	{ float: left;  font-weight: bolder; color: white; font-size: 20px; letter-spacing: 1.5px;padding: 15px 0px 15px 0px; }
-.fix-one > .fix-content  > .fix-message    	    { float: left;margin-left: 8px;font-weight: lighter;color: white;font-size: 14px;letter-spacing: 1.5px;padding: 19px 0px 15px 0px;}
+.fix-one > .fix-content  > .fix-message    	{ float: left;margin-left: 8px;font-weight: lighter;color: white;font-size: 14px;letter-spacing: 1.5px;padding: 19px 0px 15px 0px;}
+.fix-one > .fix-content  > .fix-svg			{ width: 45px; float: left; margin-right: 9px; margin-top: 5px; }
+.fix-one > .fix-content  > .fix-svg > svg		{ fill: white; }
 
+.fix-two                                        				{ position: absolute; width: auto; max-width: 350px;   height: auto; right: 15px; bottom: 15px }
+.fix-two > .fix-content  > .fix-title           	{ padding: 11px 0px 16px 0px;float: none;width: 350px;font-weight: bold;text-align: center;color: white;font-size: 23px;letter-spacing: 1px;}
+.fix-two > .fix-content  > .fix-message         	{ padding: 0px 0px 18px 0px;float: none;width: 300px;margin-left: 25px;margin-right: 25px;text-align: center;color: white;font-weight: 200;font-size: 17px;}
+.fix-two > .fix-content                         		{ width: auto; text-align: center;}
+.fix-two > .fix-content  > .fix-svg			{ width: 71px;  margin-right: 10px; margin-top: 21px; margin-left: 39%; }
+.fix-two > .fix-content  > .fix-svg > svg		{ fill: white; }
 
-.fix-two                                        { position: absolute; width: auto; max-width: 350px;   height: auto; right: 15px; bottom: 15px }
-.fix-two > .fix-content  > .fix-title           { padding: 18px 0px 16px 0px;float: none;width: 350px;font-weight: bold;text-align: center;color: white;font-size: 23px;letter-spacing: 1px;}
-.fix-two > .fix-content  > .fix-message         { padding: 0px 0px 18px 0px;float: none;width: 300px;margin-left: 25px;margin-right: 25px;text-align: center;color: white;font-weight: 200;font-size: 17px;}
-.fix-two > .fix-content                         { width: auto; }
+.fix-three                                      				{ position: absolute; width: auto; max-width: 350px;   height: auto; right: 15px; top: 15px }
+.fix-three > .fix-content  > .fix-title         	{ padding: 18px 0px 16px 0px;float: none;width: 350px;font-weight: bold;text-align: center;color: white;font-size: 23px;letter-spacing: 1px;}
+.fix-three > .fix-content  > .fix-message       	{ padding: 0px 0px 18px 0px;float: none;width: 300px;margin-left: 25px;margin-right: 25px;text-align: center;color: white;font-weight: 200;font-size: 17px;}
+.fix-three > .fix-content                       		{ width: auto; }
+.fix-three > .fix-content  > .fix-svg			{  width: 71px;  margin-right: 10px; margin-top: 21px; margin-left: 39%;  }
+.fix-three > .fix-content  > .fix-svg > svg	{ fill: white; }
 
-.fix-three                                      { position: absolute; width: auto; max-width: 350px;   height: auto; right: 15px; top: 15px }
-.fix-three > .fix-content  > .fix-title         { padding: 18px 0px 16px 0px;float: none;width: 350px;font-weight: bold;text-align: center;color: white;font-size: 23px;letter-spacing: 1px;}
-.fix-three > .fix-content  > .fix-message       { padding: 0px 0px 18px 0px;float: none;width: 300px;margin-left: 25px;margin-right: 25px;text-align: center;color: white;font-weight: 200;font-size: 17px;}
-.fix-three > .fix-content                       { width: auto; }
-
-.fix-four    					                { width: 100%; bottom: 0px; }
-.fix-four > .fix-content   					    { width: 1000px; height: auto; margin-left: auto; margin-right: auto; }
+.fix-four    					                			{ width: 100%; bottom: 0px; }
+.fix-four > .fix-content   					    	{  height: auto; margin-left: auto; margin-right: auto; max-width: calc(100% - 30px);padding-left: 15px;padding-right: 15px;width: 1000px;}
 .fix-four > .fix-content  > .fix-title      	 	{ float: left;  font-weight: bolder; color: white; font-size: 20px; letter-spacing: 1.5px;padding: 15px 0px 15px 0px; }
-.fix-four > .fix-content  > .fix-message    	    { float: left;margin-left: 8px;font-weight: lighter;color: white;font-size: 14px;letter-spacing: 1.5px;padding: 19px 0px 15px 0px;}
+.fix-four > .fix-content  > .fix-message    	    	{ float: left;margin-left: 8px;font-weight: lighter;color: white;font-size: 14px;letter-spacing: 1.5px;padding: 19px 0px 15px 0px;}
+.fix-four > .fix-content  > .fix-svg			{ width: 45px; float: left; margin-right: 9px; margin-top: 5px; }
+.fix-four > .fix-content  > .fix-svg > svg		{ fill: white; }
+
